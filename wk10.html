@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Coding Assignment</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container bg-secondary">
+
+    <br>
+
+    <div class="card bg-dark text-md-center m-5 fs-3 fst-italic text-light">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-grocery-list-name">Grocery List</label>
+                        <input type="text" class="form-control" id="new-grocery-list-name">
+                    </div>
+                </div>
+            </div>
+                <div>
+                <button id="new-gList" class="btn btn-success form-control">Submit</button>
+            </div>
+        </div>
+    </div><br>
+
+    <!--div used to store all tables created in javascript (starting point for DOM)-->
+    <div id="groceries">
+
+    </div>
+    
+    <script src="wk10.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+<!--
+    <div class="container text-center">
+        <script src="https://media.tenor.com/i-_wRENe3dYAAAAd/another-please-vegetarian.gif"></script>
+        <br />
+        <img id="picture" src="https://media.tenor.com/i-_wRENe3dYAAAAd/another-please-vegetarian.gif" class="img-fluid rounded m-5 shadow p-3 mb-5 bg-dark"/>
+    </div>
+
+    <div>
+        <button id="show-image-button">Show Image</button>
+        <img id="my-image" src="https://media.tenor.com/i-_wRENe3dYAAAAd/another-please-vegetarian.gif" style="display: none;">
+        <script>
+            const showImageButton = document.getElementById("show-image-button");
+            const myImage = document.getElementById("my-image"); 
+            showImageButton.addEventListener("click", () => { 
+             myImage.style.display = "block"; 
+            });
+        </script>
+    </div>
+
+-->
+    
+</body>
+</html>
