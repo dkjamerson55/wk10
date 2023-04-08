@@ -51,6 +51,7 @@ function getValue(id){
     return document.getElementById(id).value;
 }
 
+// function to iterate over groceries array and build tables for each of them
 function drawDOM(){
     let groceryDiv = document.getElementById('groceries');
     clearElement(groceryDiv);
@@ -67,6 +68,8 @@ function drawDOM(){
     }
 }
 
+// function for creating new rows & cells
+
 function createItemRow(grocery,table,item){
     let row= table.insertRow(2);
     row.insertCell(0).innerHTML = item.name;
@@ -74,6 +77,8 @@ function createItemRow(grocery,table,item){
     let actions = row.insertCell(2);
     actions.appendChild(createDeleteRowButton(grocery, item));
 }
+
+// btn for deleting item from list
 
 function createDeleteRowButton(grocery,item){
     let btn = document.createElement('button');
@@ -97,6 +102,7 @@ function createDeleteRowButton(grocery,item){
     return btn; // appending a child, create delete row button requires returning the created btn so it can be appended to the actions on the row & on table level.
 }
 
+// btn for deleting grocery list
 function createDeleteGroceryButton(grocery){
     let btn = document.createElement('button');
     btn.className = 'btn btn-danger';
@@ -109,6 +115,8 @@ function createDeleteGroceryButton(grocery){
     return btn;
 }
 
+// btn for creating new list item
+
 function createNewItemButton(grocery) {
     let btn = document.createElement('button');
     btn.className= 'btn btn-info';
@@ -119,6 +127,8 @@ function createNewItemButton(grocery) {
     }
     return btn;
 }
+
+// function to build table and list all elements to be created. Includes names of list items and quantity, as well as creation of new table rows and headers.
 
 function createGroceryTable(grocery){
     let table = document.createElement('table');
@@ -151,6 +161,8 @@ function createGroceryTable(grocery){
     formRow.appendChild(createTh);
     return table;
 }
+
+// function to clear input after each submission.
 
 function clearElement(element){
     while(element.firstChild){
